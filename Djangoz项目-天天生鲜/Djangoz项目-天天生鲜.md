@@ -77,8 +77,10 @@
   - django内置用户认证系统
   - authenticate(**credentials)[source]¶
 请使用authenticate()，认证一组给定的用户名和密码。它接收关键字参数形式的凭证，使用默认配置时参数是username和password，如果密码能够匹配给定的用户名，它将返回一个User对象。如果密码无效，authenticate()返回None。例子：
+
  
   ```
+  
   from django.contrib.auth import authenticate
 user = authenticate(username='john', password='secret')
 if user is not None:
@@ -90,7 +92,10 @@ if user is not None:
 else:
     # the authentication system was unable to verify the username and password
     print("The username and password were incorrect.")
+    
   ```
+  
+  
   - 如果已激活使用django内置的login()
   - `login(rediret_url,)`
   - 记住用户名 `set_cookie()`
