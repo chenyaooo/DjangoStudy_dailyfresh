@@ -75,17 +75,18 @@
 - 初步校验数据
 - 业务处理:登陆校验
   - django内置用户认证系统
-  - authenticate(**credentials)[source]
+  - *authenticate(**credentials)[source]
 请使用authenticate()，认证一组给定的用户名和密码。它接收关键字参数形式的凭证，使用默认配置时参数是username和password，如果密码能够匹配给定的用户名，它将返回一个User对象。如果密码无效，authenticate()返回None。
-例子：
+例子：*
 
   
   	```
    from django.contrib.auth import authenticate
-   ```
    
    ```
-  
+   
+   
+   ```
 	user = authenticate(username='john',  password='secret')
 	if user is not None:
 	    # the password verified for the user
@@ -126,6 +127,7 @@
 
 
 ### 用户中心-地址页
+![](images/default_address.png)
 
 ### 历史浏览记录
 
@@ -139,6 +141,10 @@
    - 每个用户的记录,用一条数据保存
    - 数据格式:list
    - 添加历史浏览记录时,从list左侧插入,每次读取最新浏览的商品id
+   ![](images/redis)
+
+- redis的数据结构
+  ![](images/redis_数据结构.png)
   
 
 
@@ -166,6 +172,8 @@
 - 图片上传是由fdfs-tracker生成文件指纹,存储在fdfs-storage中
 - 图片的下载使用fdfs效率不高,需要用到ngnix服务器
 - 图片下载时,由django服务器渲染请求地址,浏览器请求时,发送到ngnix服务器,ngnix查找到对应的文件,再发送回去
+
+![](images/fdfs_download&upload.png)
  
 
 ### 首页
@@ -285,6 +293,8 @@
        1. 循环
        2. F对象
 - 访问较少时使用乐观锁,访问多时使用悲观锁
+
+![](images/乐观锁.png)
  
  
  
