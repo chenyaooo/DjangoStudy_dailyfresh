@@ -2,7 +2,7 @@
 
 一个django的学习项目
 
-搭建一个电商网站,使用Django的M(Model)V(View)T(TemplaTemplate)完成
+搭建一个电商网站,使用Django的M(Model)V(View)T(Template)完成
 
 ### 主要功能:
 1. 登陆注册
